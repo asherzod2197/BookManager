@@ -18,3 +18,19 @@ class Kutubxona:
     def muallif_kitoblari(self, muallif):
         natija = [kitob for kitob in self.kitoblar if kitob.muallif == muallif]
         return natija
+
+kutubxona = Kutubxona()
+
+kitob1 = Kitob("Alkimyogar", "Paulo Koelyo")
+kitob2 = Kitob("Oq kema", "Chingiz Aytmatov")
+kitob3 = Kitob("Veronika o‘lishni xohlaydi", "Paulo Koelyo")
+
+kutubxona.kitob_qosh(kitob1)
+kutubxona.kitob_qosh(kitob2)
+kutubxona.kitob_qosh(kitob3)
+
+paulo_kitoblari = kutubxona.muallif_kitoblari("Paulo Koelyo")
+
+print("\nPaulo Koelyo kitoblari:")
+for k in paulo_kitoblari:
+    print("-", k.nom)
